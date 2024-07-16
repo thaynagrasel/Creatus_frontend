@@ -1,0 +1,116 @@
+.user-table-container {
+    margin: 0 auto; 
+    max-width: 800px; 
+  
+    table {
+      width: 100%;
+      border-collapse: collapse; 
+      margin-bottom: 20px; 
+      background-color: rgb(240, 240, 240); 
+      border-radius: 10px; 
+      overflow: hidden; 
+      position: relative; 
+    }
+  
+    h1 {
+      text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+    margin-bottom: 10px;
+  }
+  
+    button {
+      background-color: rgb(6, 93, 47);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(0, 70, 35); 
+    }
+  }
+    .edit-panel {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      z-index: 1000; 
+      max-width: 600px; 
+  
+      .edit-panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+  
+      .edit-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: rgb(50, 50, 50);
+      }
+  
+      .close-button {
+        background-color: transparent;
+        border: none;
+        color: rgb(50, 50, 50);
+        font-size: 16px;
+        cursor: pointer;
+      }
+  
+      .edit-panel-content {
+        .edit-field {
+          margin-bottom: 20px;
+        }
+  
+        .edit-field-title {
+          color: rgb(50, 50, 50);
+          font-size: 14px;
+          font-weight: 500;
+          margin-bottom: 5px;
+        }
+  
+        .edit-input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid lightgray;
+          border-radius: 5px;
+          background-color: white;
+          font-size: 14px;
+          transition: border-color 0.3s ease;
+        }
+      }
+  
+      .save-button {
+        background-color: rgb(6, 93, 47);
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        float: right;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: rgb(0, 70, 35); 
+        }
+      }
+    }
+    /* Estilo de fundo cinza da tabela quando o painel de edição estiver ativo */
+    &.edit-mode {
+      filter: grayscale(1); /* Aplica o tom de cinza */
+      transition: filter 0.3s ease-in-out; /* Transição suave */
+    }
+  }
+  

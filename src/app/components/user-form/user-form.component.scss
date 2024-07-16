@@ -1,0 +1,86 @@
+.user-form-container {
+    margin: 20px auto; /* Centraliza e define o espaçamento nas laterais */
+    max-width: 800px; /* Define a largura máxima do formulário */
+    background-color: rgb(240, 240, 240); /* Cor de fundo cinza claro */
+    padding: 20px; /* Espaçamento interno */
+  
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
+      padding: 10px; /* Espaçamento interno do cabeçalho */
+      background-color: white; /* Cor de fundo branca do cabeçalho */
+      border-radius: 10px; /* Bordas arredondadas */
+  
+      .user-info {
+        display: flex;
+        align-items: center;
+  
+        .user-avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: gray; /* Cor de fundo do avatar */
+          margin-right: 10px; /* Espaçamento à direita do avatar */
+        }
+  
+        .user-name {
+          color: rgb(50, 50, 50); /* Cor do texto cinza escuro */
+          font-size: 24px; /* Tamanho da fonte */
+          font-weight: 600; /* Peso da fonte bold */
+        }
+      }
+  
+      .back-button {
+        background-color: rgb(6, 93, 47); /* Cor verde */
+        color: white; /* Cor do texto branco */
+        font-size: 16px; /* Tamanho da fonte */
+        font-weight: 600; /* Peso da fonte semi-bold */
+        padding: 10px 20px; /* Espaçamento interno */
+        border-radius: 10px; /* Bordas arredondadas */
+      }
+    }
+  
+    .divider {
+      border-top: 1px solid lightgray; /* Linha divisória em cinza claro */
+      margin: 20px 0; /* Espaçamento acima e abaixo da linha divisória */
+    }
+  
+    .section-title {
+      color: rgb(50, 50, 50); /* Cor do texto cinza escuro */
+      font-size: 24px; /* Tamanho da fonte */
+      font-weight: 600; /* Peso da fonte bold */
+      margin-bottom: 10px; /* Espaçamento abaixo do título */
+    }
+  
+    .form-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Divide em duas colunas */
+      gap: 20px; /* Espaçamento entre os campos */
+    }
+  
+    .field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px; /* Espaçamento entre os campos */
+    }
+  
+    .field-title {
+      color: rgb(50, 50, 50); /* Cor do texto cinza escuro */
+      font-size: 18px; /* Tamanho da fonte */
+      font-weight: 600; /* Peso da fonte bold */
+      margin-bottom: 5px; /* Espaçamento abaixo do título */
+    }
+  
+    .input-field {
+      padding: 10px; /* Espaçamento interno */
+      border: 1px solid lightgray; /* Borda cinza */
+      border-radius: 5px; /* Bordas arredondadas */
+      background-color: white; /* Cor de fundo branca */
+      font-size: 16px; /* Tamanho da fonte */
+    }
+  }
+  

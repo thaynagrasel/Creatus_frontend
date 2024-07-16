@@ -1,0 +1,20 @@
+<div class="login-container">
+  <div class="login-panel">
+    <img class="logo" src="assets/logo.png" alt="Logo">
+    <h2 class="welcome-text">Bem-vindo</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="input-field" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" required>
+        <mat-error *ngIf="loginForm.get('email')?.invalid">Email inválido</mat-error>
+      </mat-form-field>
+      <mat-form-field class="input-field" appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input matInput formControlName="password" type="password" required>
+        <mat-error *ngIf="loginForm.get('password')?.invalid">Senha é obrigatória</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+    <div class="error-message" *ngIf="loginFormErrorMessage">{{ loginFormErrorMessage }}</div>
+  </div>
+</div>

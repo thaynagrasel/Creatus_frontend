@@ -1,0 +1,60 @@
+.login-container {
+  display: flex;
+  justify-content: flex-end; /* Alinha o painel à direita */
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4CAF50, #2E7D32); /* Gradiente verde */
+}
+
+.login-panel {
+  width: 764px; /* Largura do painel conforme especificado */
+  max-width: calc(50% + 382px); /* Metade da largura da tela */
+  height: 100%; /* Altura do painel conforme especificado */
+  padding: 20px;
+  background-color: rgba(255, 255, 255);
+  border-top-right-radius: 10px; /* Borda arredondada no canto superior direito */
+  border-bottom-right-radius: 10px; /* Borda arredondada no canto inferior direito */
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1); /* Sombra na lateral esquerda */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 100px; /* Largura do logo conforme especificado */
+  height: 100px; /* Altura do logo conforme especificado */
+  margin-top: 20px;
+}
+
+.welcome-text {
+  font-size: 38px;
+  font-weight: 600; /* Inter semi bold */
+  color: black;
+  margin-top: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+  max-width: 459px; /* Largura conforme suas especificações */
+  margin: 20px auto; /* Espaçamento em relação ao logo e ao texto de boas-vindas */
+}
+
+button[type="submit"] {
+  width: 100%;
+  max-width: 459px; /* Largura conforme suas especificações */
+  margin: 20px auto; /* Espaçamento em relação aos campos de formulário */
+  background-color: #000; /* Cor de fundo preta */
+  color: #fff; /* Cor do texto branca */
+  text-align: center; /* Centraliza o texto dentro do botão */
+  font-size: 16px; /* Tamanho da fonte */
+  padding: 15px 0; /* Espaçamento interno vertical */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Cursor do mouse como ponteiro */
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "4020:80" # Mapeando a porta 4020 para a porta 80 do contêiner frontend
+    networks:
+      - frontend-backend
+
+  backend:
+    image: creatus/backend-for-frontend-interview
+    ports:
+      - "8080:3000" # Mapeando a porta 8080 para a porta 3000 do contêiner backend
+    networks:
+      - frontend-backend
+
+networks:
+  frontend-backend:
+    driver: bridge
