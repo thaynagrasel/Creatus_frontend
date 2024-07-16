@@ -7,7 +7,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://backend:3000'; // URL da API apontando para o nome do serviço backend
+  private apiUrl = 'http://localhost:8080'; // URL da sua API de backend
 
   constructor(private http: HttpClient) { }
 
@@ -33,5 +33,18 @@ export class AuthService {
 
   isAuthenticated(): boolean {
     return this.getToken() !== null;
+  }
+ 
+  getUserData(): Observable<any> {
+    const token = this.getToken();
+    if (token) {
+      return this.http.get(`${this.apiUrl}/auth`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+    } else {
+      throw new Error('User not authenticated');
+    }
   }
 }

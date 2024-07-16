@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../service/auth.service'; // Comentado, pois não será utilizado no teste
+import { AuthService } from '../../service/auth.service'; 
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private authService: AuthService, // Comentado, pois não será utilizado no teste
+    private authService: AuthService, 
     private router: Router
   ) {
     this.loginForm = this.fb.group({

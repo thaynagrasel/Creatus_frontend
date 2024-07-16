@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -15,7 +15,7 @@ import { UserTableComponent } from './components/user-table/user-table.component
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { HomeComponent } from './components/home/home.component';
 import { MatCardModule } from '@angular/material/card';
-
+import { AuthInterceptor } from './service/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,9 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

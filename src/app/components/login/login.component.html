@@ -6,7 +6,8 @@
       <mat-form-field class="input-field" appearance="fill">
         <mat-label>Email</mat-label>
         <input matInput formControlName="email" type="email" required>
-        <mat-error *ngIf="loginForm.get('email')?.invalid">Email inválido</mat-error>
+        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email é obrigatório</mat-error>
+        <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Email inválido</mat-error>
       </mat-form-field>
       <mat-form-field class="input-field" appearance="fill">
         <mat-label>Senha</mat-label>

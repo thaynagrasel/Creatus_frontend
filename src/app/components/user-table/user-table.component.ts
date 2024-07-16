@@ -1,5 +1,3 @@
-// user-table.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../service/user.service';
 import { Router } from '@angular/router';

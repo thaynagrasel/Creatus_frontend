@@ -12,7 +12,11 @@ export class UserService {
 
   private getHeaders(): HttpHeaders {
     const token = localStorage.getItem('token');
-    return new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    if (token) {
+      return new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    } else {
+      return new HttpHeaders();
+    }
   }
 
   getUsers(): Observable<any[]> {
